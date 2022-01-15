@@ -1,4 +1,31 @@
-body{
-    background-color: antiquewhite;
-   
+body {
+  background-color: antiquewhite;
+}
+
+#header {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(/images/head/footerimage.jpeg);
+  background-repeat: no-repeat;
+  height: 40rem;
+  background-size: cover;
+}
+
+#menu {
+  background-image: url();
+}
+
+#title {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+#text {
+     text-align: center;
+    color: #fff;
+    padding:1rem;
 }
