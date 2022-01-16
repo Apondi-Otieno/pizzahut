@@ -6,7 +6,7 @@
     ),
     url(/images/head/footerimage.jpeg);
   background-repeat: no-repeat;
-  height: 40rem;
+  height: 43rem;
   background-size: cover;
 }
 
@@ -118,7 +118,7 @@
 }
 
 footer{
-  
+  text-align: center;
   background-color:rgb(2, 2, 15);
   color:white;
 }
