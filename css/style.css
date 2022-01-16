@@ -38,3 +38,9 @@ body {
 #menu-image {
   float: right;
 }
+
+#menu-images {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
