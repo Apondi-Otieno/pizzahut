@@ -41,60 +41,63 @@
             <img src="images/menu/pizza3.png" alt="pizza3" width="30%">
         </div>
     </div>
+<div class="col-lg-6 offset-lg-3">
+    <img src="images/funky/illustration.jpeg" alt="">
+</div>
+    <div id="form-container">
+        <div class="container" id="form">
 
-    <div class="container" id="form">
+            <h3 id="heading" class="col-lg-6 offset-lg-3">WANT A PIZZA?</h3>
+            <!-- adding a form input to ask type of pizza the user wants; size, crust and toppings -->
 
-        <h3 id="heading" class="col-lg-6 offset-lg-3">WANT A PIZZA?</h3>
-        <!-- adding a form input to ask type of pizza the user wants; size, crust and toppings -->
+            <div class="col-lg-6 offset-lg-3" id="pizza-container">
+                <label for="Pizza-size">Please select the pizza size you want </label><br>
+                <select id="pizza-size">
 
-        <div class="col-lg-6 offset-lg-3" id="pizza-container">
-            <label for="Pizza-size">Please select the pizza size you want </label><br>
-            <select id="pizza-size">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select><br><br>
+                <label for="pizza crust">Please pick a crust</label><br>
+                <select name="" id="pizza-crust">
+                    <option value="Stuffed">Stuffed</option>
+                    <option value="Gluten-free">Gluten-free</option>
+                    <option value="crispy">Crispy</option>
+                </select>
+                <br><br>
+                <label for="toppings">Now choose a topping, feel free to go crazy.It's your pizza!</label><br>
+                <select name="" id="toppings">
+                    <option value="">Brocollini</option>
+                    <option value="">Potato and sausage</option>
+                    <option value="">Bacon</option>
+                    <option value="">Anchovies</option>
+                    <option value="">Mixed sliced mushrooms and garlic</option>
+                    <option value="">Pepperoni</option>
+                    <option value="">Garlic butter prawns and chilli</option>
+                    <option value="">Sausage and kale</option>
+                    <option value="">BBQ Chicken</option>
+                    <option value="">Margherita</option>
+                    <option value="">Capricciosa</option>
 
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select><br><br>
-            <label for="pizza crust">Please pick a crust</label><br>
-            <select name="" id="pizza-crust">
-                <option value="Stuffed">Stuffed</option>
-                <option value="Gluten-free">Gluten-free</option>
-                <option value="crispy">Crispy</option>
-            </select>
-            <br><br>
-            <label for="toppings">Now choose a topping, feel free to go crazy.It's your pizza!</label><br>
-            <select name="" id="toppings">
-                <option value="">Brocollini</option>
-                <option value="">Potato and sausage</option>
-                <option value="">Bacon</option>
-                <option value="">Anchovies</option>
-                <option value="">Mixed sliced mushrooms and garlic</option>
-                <option value="">Pepperoni</option>
-                <option value="">Garlic butter prawns and chilli</option>
-                <option value="">Sausage and kale</option>
-                <option value="">BBQ Chicken</option>
-                <option value="">Margherita</option>
-                <option value="">Capricciosa</option>
+                </select>
+                <label for="number-of-pizza"><br>How many pizzas to eat?</label><br>
+                <input type="number" id="number-of-pizza" name="number-of-p">
+                <form action="" class="">
+                    <input type="radio" id="delivery" name="delivery" value="delivery" checked>
+                    <label for="delivery"><br>DELIVERY</label><br>
+                    <input type="radio" id="pickup" name="pickup" value="pickup">
+                    <label for="pickup"> PICK-UP</label><br><br>
 
-            </select>
-            <label for="number-of-pizza"><br>How many pizzas to eat?</label><br>
-            <input type="number" id="number-of-pizza" name="number-of-p">
-            <form action="" class="">
-                <input type="radio" id="delivery" name="delivery" value="delivery" checked>
-                <label for="delivery"><br>DELIVERY</label><br>
-                <input type="radio" id="pickup" name="pickup" value="pickup">
-                <label for="pickup"> PICK-UP</label><br><br>
-
-                <input type="submit" value="Submit" class="btn btn-primary">
-            </form>
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </form>
 
 
+            </div>
         </div>
+
     </div>
-
-
     <footer>
-       
+
     </footer>
     <!-- js file -->
     <script src="js/script.js"></script>
