@@ -21,11 +21,20 @@ body {
 #title {
     text-align: center;
     color: #fff;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 #text {
      text-align: center;
     color: #fff;
-    padding:1rem;
+    padding:2rem;
+    font-size: 2rem;
+}
+
+#logo {
+  padding: 2rem;
+}
+
+#menu-image {
+  float: right;
 }
