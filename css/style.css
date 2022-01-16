@@ -26,11 +26,12 @@
   font-family: 'Dongle', sans-serif;
   color: #fff;
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #logo {
-  padding: 2rem;
+  padding: 1rem;
+  
 }
 
 #menu-image {
@@ -45,15 +46,15 @@
 
 #menu-heading {
   text-align: center;
-  font-size: 3rem;
-  padding: 1.6rem;
+  font-size: 5rem;
+  padding: 1rem;
   font-weight: bold;
   font-family: 'Dongle', sans-serif;
 }
 
 #menu-text {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   font-family: 'Dongle', sans-serif;
 }
 
@@ -112,6 +113,6 @@
 }
 
 #illustration{
-  justify-content:space-evenly;
+ 
   padding-left: 40%;
 }
