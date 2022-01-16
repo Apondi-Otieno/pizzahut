@@ -11,7 +11,7 @@
 }
 
 #menu {
-  background-image: url();
+  padding:2rem;
 }
 
 #title {
@@ -83,6 +83,10 @@
 #form-container{
   padding:6rem;
 }
+
+#illustration{
+  justify-content:center;
+}
 #pizza-size {
   width: 80%;
   padding: 1rem;
@@ -105,4 +109,9 @@
   width: 80%;
   padding: 1rem;
   
+}
+
+#illustration{
+  justify-content:space-evenly;
+  padding-left: 40%;
 }
