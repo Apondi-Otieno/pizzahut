@@ -116,3 +116,20 @@
  
   padding-left: 40%;
 }
+
+footer{
+  
+  background-color:rgb(2, 2, 15);
+  color:white;
+}
+
+#footer {
+  padding:3rem;
+   font-family: 'Dongle', sans-serif;
+   font-size: 2rem;
+}
+
+.footer-text{
+  font-size:4rem;
+  font-weight: bold;
+}
