@@ -33,7 +33,7 @@ $(document).ready(function(){
     var PotatoAndSausage =new pizzaToppings("potato", 100);
     var Bacon= new pizzaToppings("bacon",200);
     var Anchovies = new pizzaToppings("anchovies", 400);
-    var MixedSlicedMushroomsAndGarlicm = new pizzaToppings("mushroom",200);
+    var MixedSlicedMushroomsAndGarlic = new pizzaToppings("mushroom",200);
     var Pepperoni=new pizzaToppings("pepperoni", 300);
     var GarlicButterPrawnsAndChilli = new pizzaToppings("garlic",340);
     var SausageAndKale =new pizzaToppings("sausage",400);
@@ -83,68 +83,95 @@ $(document).ready(function(){
       alert("sellect your pizza crust");
     }
 //     //toppings
-     var selectedtoppings = $("select[name='pizza-toppings']:selected").val();
-     if (selectedtoppings == "pepperoni") {
-       var pricePerToppings = Pepperoni.price;
-      //alert(pricePerToppings)
-       //return pricePerToppings;
-    } else if (selectedtoppings == "mushroom") {
-      var pricePerToppings = Mushroom.price;
+     var selectedtoppings = $("option[name='pizza-toppings']:selected").val();
+     if (selectedtoppings == "brocollini") {
+       var pricePerToppings = brocollinii.price;
+      alert(pricePerToppings);
+       return pricePerToppings;
+    } else if (selectedtoppings == "potato") {
+      var pricePerToppings = potato.price;
       return pricePerToppings;
+      alert(pricePerToppings);
+    } else if (selectedtoppings == "bacon") {
+      var pricePerToppings = bacon.price;
+      alert(pricePerToppings);
+      return pricePerToppings;
+     
+    } else if (selectedtoppings == "anchovies") {
+      var pricePerToppings = anchovies.price;
       alert(pricePerToppings)
-    } else if (selectedtoppings == "onion") {
-      var pricePerToppings = Onion.price;
-      //alert(pricePerToppings)
-      //return pricePerToppings;
-      //alert(pricePerToppings)
-    } else if (selectedtoppings == "tomato") {
-      var pricePerToppings = Tomato.price;
-      alert(pricePerToppings)
-      //return pricePerToppings;
-      //alert(pricePerToppings)
-    } else if (selectedtoppings == "freshgarlic") {
-      var pricePerToppings = FreshGarlic.price;
-      //alert(pricePerToppings)
-      //return pricePerToppings;
-      //alert(pricePerToppings)
-    } else if (selectedtoppings == "freshbasil") {
-      var pricePerToppings = FreshBasil.price;
-      //alert(pricePerToppings)
-      //return pricePerToppings;
-    } else {
+      return pricePerToppings;
+      alert(pricePerToppings);
+    } else if (selectedtoppings == "mushroom") {
+      var pricePerToppings = mushroom.price;
+      alert(pricePerToppings);
+      return pricePerToppings;
+     
+    } else if (selectedtoppings == "pepperoni") {
+      var pricePerToppings = pepperoni.price;
+      alert(pricePerToppings);
+      return pricePerToppings;
+    } else
+    else if (selectedtoppings == "garlic") {
+      var pricePerToppings = garlic.price;
+      alert(pricePerToppings);
+      return pricePerToppings;
+    }
+    else if (selectedtoppings == "sausage") {
+      var pricePerToppings = sausage.price;
+      alert(pricePerToppings);
+      return pricePerToppings;
+    }
+    else if (selectedtoppings == "chicken") {
+      var pricePerToppings = chicken.price;
+      alert(pricePerToppings);
+      return pricePerToppings;
+    }
+    else if (selectedtoppings == "margherita") {
+      var pricePerToppings = margherita.price;
+      alert(pricePerToppings);
+      return pricePerToppings;
+    }
+    else if (selectedtoppings == "capricciosa") {
+      var pricePerToppings = capricciosa.price;
+      alert(pricePerToppings);
+      return pricePerToppings;
+    }
+
+    {
        alert("sellect your preffered toppongs");
-//     }
-//     var pizzaNumber = $("#number").val();
-//     //alert(pizzaNumber)
-//     //prototype
-//     var totalAmount = function () {
-//       return (pricePerSize + pricePerToppings + pricePerCrust) * pizzaNumber
-//     };
-//     totalAmount();
-//     var totalAmount1 = totalAmount()
-//     // alert(totalAmount1)
-//     $(".size1").append(radioValue + "</br>");
-//     $(".type").append(selectedcrusttype + "</br>");
-//     $(".topping").append(selectedtoppings + "</br>");
-//     $(".numb").append(pizzaNumber + "</br>");
-//     $(".amnt").append(totalAmount1 + "</br>");
-//     var delivery = $("input[name='delivery']:checked").val();
-//     if (delivery == "delivered") {
-//       let charges = totalAmount1 + deliveryFee
-//       //alert(charges)
-//       $(".message").show();
-//     } else if (delivery == "pick-up") {
-//       alert("your order has been recieved, thank you for shopping with us, please collect your order within the hour")
-//     }
-//     else {
-//       alert("select your delivery mode")
-//     }
-//     //
-//     //  $(".your_location").show( slow, swing)
-//   });
+    }
+    var pizzaNumber = $("#number").val();
+    //alert(pizzaNumber)
+    //prototype
+    var totalAmount = function () {
+      return (pricePerSize + pricePerToppings + pricePerCrust) * pizzaNumber
+    };
+    totalAmount();
+    var totalAmount1 = totalAmount()
+    // alert(totalAmount1)
+    $(".size1").append(radioValue + "</br>");
+    $(".type").append(selectedcrusttype + "</br>");
+    $(".topping").append(selectedtoppings + "</br>");
+    $(".numb").append(pizzaNumber + "</br>");
+    $(".amnt").append(totalAmount1 + "</br>");
+    var delivery = $("input[name='delivery']:checked").val();
+    if (delivery == "delivered") {
+      let charges = totalAmount1 + deliveryFee
+      //alert(charges)
+      $(".message").show();
+    } else if (delivery == "pick-up") {
+      alert("your order has been recieved, thank you for shopping with us, please collect your order within the hour")
+    }
+    else {
+      alert("select your delivery mode")
+    }
+    //
+    //  $(".your_location").show( slow, swing)
+  });
 
 
-// });
+});
 
 
 // function select(){
