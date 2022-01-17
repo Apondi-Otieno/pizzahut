@@ -11,6 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
+
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,30 +44,31 @@
     <div class="container-fluid" id="illustration">
         <img class="image-responsive" src="images/funky/illustration.jpeg" alt="pizza-illustration" width="30%">
     </div>
+
     <div id="form-container">
-        <div class="container" id="form">
+        <div class="close_btn" id="form">
 
             <h3 id="heading" class="col-lg-6 offset-lg-3">WANT A PIZZA?</h3>
             <!-- adding a form input to ask type of pizza the user wants; size, crust and toppings -->
 
             <div class="col-lg-6 offset-lg-3" id="pizza-container">
-                <label for="Pizza-size">Please select the pizza size you want </label><br>
-                <select id="pizza-size">
+                <label for="exampleFormControlFile1">Please select the pizza size you want </label><br>
+                <select id="pizza-size" required>
                     <option name="Pizza-size" value=""></option>
                     <option name="Pizza-size" value="Small">Small</option>
                     <option name="Pizza-size" value="Medium">Medium</option>
                     <option name="Pizza-size" value="Large">Large</option>
                 </select><br><br>
-                <label for="pizza crust">Please pick a crust</label><br>
-                <select id="pizza-crust">
+                <label for="exampleFormControlFile1">Please pick a crust</label><br>
+                <select id="pizza-crust" required>
                     <option name="pizza-crust" value=""></option>
                     <option name="pizza-crust" value="stuffed">Stuffed</option>
                     <option name="pizza-crust" value="glutenfree">Gluten-free</option>
                     <option name="pizza-crust" value="crispy">Crispy</option>
                 </select>
                 <br><br>
-                <label for="toppings">Now choose a topping, feel free to go crazy.It's your pizza!</label><br>
-                <select id="toppings">
+                <label for="exampleFormControlFile1">Now choose a topping, feel free to go crazy.It's your pizza!</label><br>
+                <select id="toppings" class="required">
                     <option name="pizza-toppings" value=""></option>
                     <option name="pizza-toppings" value="">Brocollini</option>
                     <option name="pizza-toppings" value="">Potato and sausage</option>
@@ -81,25 +83,31 @@
                     <option name="pizza-toppings" value="">Capricciosa</option>
 
                 </select>
-                <label for="number-of-pizza"><br>How many pizzas to eat?</label><br>
-                <input type="number" id="number-of-pizza" name="number-of-p">
+                <label for="exampleFormControlFile1"><br>How many pizzas to eat?</label><br>
+                <input type="number" id="number-of-pizza" name="number-of-p" required>
                 <form action="" class="">
 
-                    <input type="radio" id="delivery" name="delivery" value="delivery">
-                    <label for="delivery"><br>DELIVERY</label><br><br>
+                    <input type="radio" id="delivery" name="delivery" value="delivery"> 
+                    <label for="exampleFormControlFile1"><br>DELIVERY</label><br><br>
 
                     <!-- prompt for location -->
 
-                    <input type="radio" id="pickup" name="pickup" value="pickup">
-                    <label for="pickup"> PICK-UP</label><br><br>
-                    <input type="submit" value="Order" class="btn-outline-secondary">
+                    <input type="radio" id="pickup" name="pickup" value="pickup" >
+                    <label for="exampleFormControlFile1"> PICK-UP</label><br><br>
+                    <button type="submit" id="order">Order</button>
                 </form>
-
 
             </div>
         </div>
-
     </div>
+
+    <div id="order-details">
+        <p>We have received your order. You have ordered <span id="num"></span> pizza with <span id="top"></span>
+            topping and <span id="crts"></span> crust </p>
+        <p>Your total price is <span id="price"></span></p>
+        <p id="loc">Your order will be delivered to <span id="location"> </span></p>
+    </div>
+
     <footer class="container-fluid">
         <div class="container" id="footer">
             <h4 class="footer-text">CONTACT US</h4>
@@ -111,6 +119,12 @@
     </footer>
 
     <!-- jquery CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- js file -->
