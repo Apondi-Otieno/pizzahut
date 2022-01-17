@@ -11,7 +11,7 @@ This pizza website will help users choose the pizza they want, select toppings a
 
 # Display
 
-# LIVE lINK
+# Live Link
 
 # Known Bugs
 There are no known bugs in this website
