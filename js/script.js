@@ -111,7 +111,7 @@ $(document).ready(function(){
       var pricePerToppings = pepperoni.price;
       alert(pricePerToppings);
       return pricePerToppings;
-    } else
+    } 
     else if (selectedtoppings == "garlic") {
       var pricePerToppings = garlic.price;
       alert(pricePerToppings);
@@ -137,20 +137,24 @@ $(document).ready(function(){
       alert(pricePerToppings);
       return pricePerToppings;
     }
-
+    else
     {
-       alert("sellect your preffered toppongs");
+       alert("select your preffered toppings");
     }
-    var pizzaNumber = $("#number").val();
-    //alert(pizzaNumber)
+
+
+    var pizzaNumber = $("#number-of-pizza").val();
+    alert(pizzaNumber);
+
     //prototype
     var totalAmount = function () {
       return (pricePerSize + pricePerToppings + pricePerCrust) * pizzaNumber
     };
+
     totalAmount();
     var totalAmount1 = totalAmount()
-    // alert(totalAmount1)
-    $(".size1").append(radioValue + "</br>");
+    alert(totalAmount1)
+    $(".size1").append(optionValue + "</br>");
     $(".type").append(selectedcrusttype + "</br>");
     $(".topping").append(selectedtoppings + "</br>");
     $(".numb").append(pizzaNumber + "</br>");
@@ -171,7 +175,7 @@ $(document).ready(function(){
   });
 
 
-});
+
 
 
 // function select(){
