@@ -1,15 +1,15 @@
 # Pizzeria Bolognese
 
-# Designed by
+## Designed by
 
 APONDI OTIENO
 
 
-# Description
+### Description
 
 This pizza website will help users choose the pizza they want, select toppings and decide whether they want it delivered or not.
 
-# Display
+### Display
 
 ![Screenshot from 2022-01-18 01-57-37](https://user-images.githubusercontent.com/93314840/149845682-97a6f013-1372-4980-b29d-abc0395532b1.png)
 
@@ -21,15 +21,15 @@ This pizza website will help users choose the pizza they want, select toppings a
 
 ![Screenshot from 2022-01-18 01-58-33](https://user-images.githubusercontent.com/93314840/149845638-7cf7de1c-f4c1-4928-9f19-1a9a4de16c5a.png)
 
-# Live Link
+#### Live Link
 https://apondi-otieno.github.io/pizzahut/
 
-# Known Bugs
+#### Known Bugs
 There are no known bugs in this website
 
-# Contact
+#### Contact
 You can reach me at apondioti@gmail.com
 
-# LICENSE
+#### LICENSE
 
 MIT 2022
