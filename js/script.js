@@ -160,26 +160,21 @@ $(document).ready(function(){
     $(".numb").append(pizzaNumber + "</br>");
     $(".amnt").append(totalAmount1 + "</br>");
     var delivery = $("input[name='delivery']:checked").val();
-    if (delivery == "delivered") {
+    if (delivery == "DELIVERY") {
       let charges = totalAmount1 + deliveryFee
-      //alert(charges)
+      alert(charges)
       $(".message").show();
-    } else if (delivery == "pick-up") {
+    } else if (delivery == "PICK-UP") {
       alert("your order has been recieved, thank you for shopping with us, please collect your order within the hour")
     }
     else {
       alert("select your delivery mode")
     }
-    //
-    //  $(".your_location").show( slow, swing)
+    
+     $(".your_location").show( slow, swing)
   });
 
 
 
 
 
-// function select(){
-//     if(value =="delivery"){
-//         value= prompt("Please enter location")
-//     }
-// }
