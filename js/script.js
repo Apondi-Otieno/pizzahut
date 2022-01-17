@@ -31,13 +31,13 @@ $(function () {
 
 
     } else {
-      let order = new CreateOrder(
+      let order = new clientOrder(
         pizzaFlavour,
         pizzaSize,
         crust,
         toppings,
         location,
-        quantity
+        quantity,
       );
       let total =
         (order.pizza.price + order.crust.price + order.toppings.price) *
@@ -125,7 +125,7 @@ let pizzaToppings = {
 
 /**Create an Order class */
 
-class CreateOrder {
+class clientOrder {
   constructor(flavour, size, crust, toppings, location, quantity) {
     (this.pizza = {
       flavour: pizzaFlavour[flavour],
@@ -145,9 +145,9 @@ class CreateOrder {
   }
 }
 
-CreateOrder.prototype.deliveryCharges = 200;
+clientOrder.prototype.deliveryCharges = 200;
 
-let newOrder = new CreateOrder(
+let newOrder = new clientOrder(
   "veggieTikka",
   "medium",
   "thinCrust",
