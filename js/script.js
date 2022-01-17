@@ -1,124 +1,158 @@
+$(function () {
 
-function pizza(size, toppings, crust, number, delivery) {
-  this.size = size;
-  this.toppings = toppings;
-  this.crust = crust;
-  this.number = number;
-  this.delivery = delivery;
+  //Check if User has requested for delivery
+  let confirmDelivery = $("#delivery");
 
+  // display the input field for entering the location
 
+  confirmDelivery.on("change", () => {
+    let confirmed = confirm("Charges for Delivery will be Ksh. 200/=");
+    confirmed ?
+      $("#delivery-location").removeClass("d-none") :
+      $("#delivery-location").addClass("d-none");
+  });
 
-  $(document).ready(function () {
-    $("#order").click(function () {
-      $(".popup").toggle();
-      $("#order").hide()
-    })
+  //Get Order
 
-    $(".close").click(function () {
-      $(".popup").hide();
-      $("#order").show()
-    })
+  let pizzaFlavour = $("#flavour").val();
+  let pizzaSize = $("#size").val();
+  let crust = $("#crust").val();
+  let toppings = $("#toppings").val();
+  let quantity = parseInt($("#amount").val());
 
-    $("#form").submit(function (event) {
-      event.preventDefault();
+  let form = $("#makeOrder");
 
-      var size = $('#pizza-size').val();
-      var toppings = $('#toppings').val();
-      var crust = $('#pizza-crust').val();
-      var number = $('#number-of-pizza').val();
-      var delivery = $('#delivery').val();
+  form.on("submit", (e) => {
+    e.preventDefault();
+    let location = confirmDelivery[0].checked ? $("#location").val() : "";
 
-      var pizzaSize, pizzaCrust, toppings, number;
-      var Pizza = new Pizza(size, toppings, crust, number, delivery);
+    if (confirmDelivery[0].checked && !location) {
+      alert("Enter a valid Location");
 
 
-      if (pizza.pizzaSize == "small") {
-        pizzaSize = 800;
-      } else if (pizza.pizzaSize == "medium") {
-        pizzaSize = 1000;
-      } else if (pizza.pizzaSize == "large") {
-        pizzaSize = 1500;
-      } else {
-        value = 0;
-      }
-
-
-      if (pizza.pizzaCrust == "stuffed") {
-        pizzaCrust = 200;
-      } else if (pizza.pizzaCrust == "glutenfree") {
-        pizzaCrust = 300;
-      } else if (pizza.pizzaCrust == "crispy") {
-        pizzaCrust = 500;
-      } else {
-        value = 0;
-      }
-
-
-      if (pizza.toppings == "brocollini") {
-        toppings = 200;
-
-      } else if (pizza.toppings == "potato") {
-        toppings = 100;
-
-      } else if (pizza.toppings == "bacon") {
-        toppings = 200;
-
-      }
-      else if (pizza.toppings == "anchovies") {
-        toppings = 100;
-
-      } else if (pizza.toppings == "pepperoni") {
-        toppings = 250;
-
-      } else if (pizza.toppings == "garlic") {
-        toppings = 270;
-
-      } else if (pizza.toppings == "sausage") {
-        toppings = 400;
-
-      } else if (pizza.toppings == "chicken") {
-        toppings = 200;
-
-      } else if (pizza.toppings == "margherita") {
-        toppings = 200;
-
-      } else if (pizza.toppings == "capricciosa") {
-        toppings = 300;
-
-      }
-
-      else {
-        value = 0;
-      }
-
-    })
-    var total;
-    total = (pizzaSize + pizzaCrust + toppings) * number;
-    var deliveryCost;
-    if (pizza.delivery == "yes") {
-      deliveryCost = 200;
-      alert(" Delivery cost is " + deliveryCost);
-      var location = prompt("Please indicate your location");
-      alert("your order will be delivered to " + location);
     } else {
-      deliveryCost = 0;
-      $("#loc").hide();
+      let order = new CreateOrder(
+        pizzaFlavour,
+        pizzaSize,
+        crust,
+        toppings,
+        location,
+        quantity
+      );
+      let total =
+        (order.pizza.price + order.crust.price + order.toppings.price) *
+        order.quantity;
+
+      let deliveryMsg;
+
+
+      if (location) {
+        total = total + order.deliveryCharges;
+        deliveryMsg = `Your order will be delivered to your location at, ${order.location}`;
+      } else {
+        deliveryMsg = "";
+      }
+
+       let message = `Your order of ${order.pizza.flavour} of size ${order.pizza.size} with ${order.crust.crust} and ${order.toppings.toppings} toppings will cost a total of ${total}`;
+
+
+      if (location) {
+        alert(message);
+        alert(deliveryMsg);
+
+      } else {
+        alert(message)
+      }
     }
+  });
+});
+
+/** Create Pizza Flavour, Price, Toppings and Crust Objects */
+let pizzaFlavour = {
+  veggieTikka: "Veggie Tikka",
+  chickenTikka: "Chicken Tikka",
+  chickenMushroom: "Chicken Mushroom",
+  hawaaian: "Hawaaian",
+};
 
 
-    total = price + deliveryCost;
 
-    $("#order-details").show();
-    $("#numbr").html(number);
-    $("#topping").html(toppings);
-    $("#crust").html(crust);
-    $("#price").html(total);
-    $("#loc").html(location);
+let pizzaPrice = {
+  small: 500,
+  medium: 800,
+  large: 1200,
+};
 
-  })
+let pizzaCrustName = {
+  thick: "stuffed",
+  thin: "crispy",
+  flatbreadCrust: "gluten-free",
+};
+
+let pizzaCrust = {
+  thin: 100,
+  thick: 150,
+  flatbreadCrust: 180,
+};
+
+let pizzaToppingsName = {
+  brocollini: " Brocollini",
+  potato: " Potato and sausage",
+  bacon: "Bacon",
+  anchovies: "Anchovies",
+  mushroom: "Mixed sliced mushrooms and garlic",
+  pepperoni: "Pepperoni",
+  garlic: "Garlic butter prawns and chilli",
+  sausage: "Sausage and kale",
+  chicken: "Chicken",
+  margherita: "Margherita",
+  capricciosa: "Capricciosa",
+};
+
+let pizzaToppings = {
+  brocollini: 80,
+  potato: 80,
+  bacon: 80,
+  anchovies: 80,
+  mushroom: 120,
+  pepperoni: 120,
+  garlic: 170,
+  sausage: 170,
+  chicken: 170,
+  margherita: 170,
+  capricciosa: 170
+};
+
+/**Create an Order class */
+
+class CreateOrder {
+  constructor(flavour, size, crust, toppings, location, quantity) {
+    (this.pizza = {
+      flavour: pizzaFlavour[flavour],
+      size,
+      price: pizzaPrice[size],
+    }),
+      (this.crust = {
+        crust: pizzaCrustName[crust],
+        price: pizzaCrust[crust],
+      }),
+      (this.toppings = {
+        toppings: pizzaToppingsName[toppings],
+        price: pizzaToppings[toppings],
+      }),
+      (this.location = location),
+      (this.quantity = quantity);
+  }
 }
 
+CreateOrder.prototype.deliveryCharges = 200;
 
-
-
+let newOrder = new CreateOrder(
+  "veggieTikka",
+  "medium",
+  "thinCrust",
+  "potato",
+  "",
+  1
+);
 

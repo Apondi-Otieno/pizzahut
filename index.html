@@ -45,67 +45,86 @@
         <img class="image-responsive" src="images/funky/illustration.jpeg" alt="pizza-illustration" width="30%">
     </div>
 
-    <div id="form-container">
-        <div class="close" id="form">
-
+    <!-- Order Section -->
+    <div id="pizza_order" class="order mb-4">
+        <div class="container" id="form-container">
             <h3 id="heading" class="col-lg-6 offset-lg-3">WANT A PIZZA?</h3>
-            <!-- adding a form input to ask type of pizza the user wants; size, crust and toppings -->
+            <form id="makeOrder" autocomplete="off">
+                <div class="mb-3">
+                    <label for="size" class="form-label fs-4">Please select the pizza size you want </label>
+                    <select name="size" id="size" class="form-select" required><br>
+                        <option name="Pizza-size" value=""></option>
+                        <option name="Pizza-size" value="Small">Small</option>
+                        <option name="Pizza-size" value="Medium">Medium</option>
+                        <option name="Pizza-size" value="Large">Large</option>
+                    </select>
+                </div>
 
-            <div class="col-lg-6 offset-lg-3" id="pizza-container">
-                <label for="exampleFormControlFile1">Please select the pizza size you want </label><br>
-                <select id="pizza-size" required>
-                    <option name="Pizza-size" value=""></option>
-                    <option name="Pizza-size" value="Small">Small</option>
-                    <option name="Pizza-size" value="Medium">Medium</option>
-                    <option name="Pizza-size" value="Large">Large</option>
-                </select><br><br>
-                <label for="exampleFormControlFile1">Please pick a crust</label><br>
-                <select id="pizza-crust" required>
-                    <option name="pizza-crust" value=""></option>
-                    <option name="pizza-crust" value="stuffed">Stuffed</option>
-                    <option name="pizza-crust" value="glutenfree">Gluten-free</option>
-                    <option name="pizza-crust" value="crispy">Crispy</option>
-                </select>
-                <br><br>
-                <label for="exampleFormControlFile1">Now choose a topping, feel free to go crazy.It's your pizza!</label><br>
-                <select id="toppings" class="required">
-                    <option name="pizza-toppings" value=""></option>
-                    <option name="pizza-toppings" value="">Brocollini</option>
-                    <option name="pizza-toppings" value="">Potato and sausage</option>
-                    <option name="pizza-toppings" value="">Bacon</option>
-                    <option name="pizza-toppings" value="">Anchovies</option>
-                    <option name="pizza-toppings" value="">Mixed sliced mushrooms and garlic</option>
-                    <option name="pizza-toppings" value="">Pepperoni</option>
-                    <option name="pizza-toppings" value="">Garlic butter prawns and chilli</option>
-                    <option name="pizza-toppings" value="">Sausage and kale</option>
-                    <option name="pizza-toppings" value="">Chicken</option>
-                    <option name="pizza-toppings" value="">Margherita</option>
-                    <option name="pizza-toppings" value="">Capricciosa</option>
+                <div class="mb-3">
+							<label for="flavour" class="form-label fs-4"
+								>What's Your Pizza Flavour?</label
+                                >
+							<select name="flavour" id="flavour" class="form-select" required>
+                                <option value=""> </option>
+								<option value="veggieTikka">Veggie Tikka</option>
+								<option value="chickenTikka">Chicken Tikka</option>
+								<option value="chickenMushroom">Chicken and Mushroom</option>
+								<option value="hawaain">Hawaaian</option>
+							</select>
+                            </div>
+                <div class="mb-3">
+                    <label for="crust" class="form-label fs-4">Please pick a crust</label><br>
+                    <select name="crust" id="crust" class="form-select" required>
+                        <option name="pizza-crust" value=""></option>
+                        <option name="pizza-crust" value="stuffed">Stuffed</option>
+                        <option name="pizza-crust" value="glutenfree">Gluten-free</option>
+                        <option name="pizza-crust" value="crispy">Crispy</option>
+                    </select>
+                </div>
 
-                </select>
-                <label for="exampleFormControlFile1"><br>How many pizzas to eat?</label><br>
-                <input type="number" id="number-of-pizza" name="number-of-p" required>
-                <form action="" class="">
+                <div class="mb-3">
+                    <label for="toppings" class="form-label fs-4">Now choose a topping, feel free to go crazy.It's your
+                        pizza!</label>
+                    <select name="toppings" id="toppings" class="form-select" required>
+                        <option name="pizza-toppings" value=""></option>
+                        <option name="pizza-toppings" value="">Brocollini</option>
+                        <option name="pizza-toppings" value="">Potato and sausage</option>
+                        <option name="pizza-toppings" value="">Bacon</option>
+                        <option name="pizza-toppings" value="">Anchovies</option>
+                        <option name="pizza-toppings" value="">Mixed sliced mushrooms and garlic</option>
+                        <option name="pizza-toppings" value="">Pepperoni</option>
+                        <option name="pizza-toppings" value="">Garlic butter prawns and chilli</option>
+                        <option name="pizza-toppings" value="">Sausage and kale</option>
+                        <option name="pizza-toppings" value="">Chicken</option>
+                        <option name="pizza-toppings" value="">Margherita</option>
+                        <option name="pizza-toppings" value="">Capricciosa</option>
+                    </select>
+                </div>
 
-                    <input type="radio" id="delivery" name="delivery" value="delivery"> 
-                    <label for="exampleFormControlFile1"><br>DELIVERY</label><br><br>
+                <label class="form-label fs-4"><br>How many pizzas to eat?</label><br>
+                <input type="number" id="number-of-pizza" name="number-of-p" required><br><br>
 
-                    <!-- prompt for location -->
+                <div class="mb-3">
+                    <label class="form-label fs-4">Do you want your order Delivered? </label>
 
-                    <input type="radio" id="pickup" name="pickup" value="pickup" >
-                    <label for="exampleFormControlFile1"> PICK-UP</label><br><br>
-                    <button type="submit" id="order">Order</button>
-                </form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="delivery" />
+                        <label class="form-check-label" for="delivery">
+                            I would appreciate a delivery.
+                        </label>
+                    </div>
 
-            </div>
+                </div>
+
+                <div class="mb-3 d-none" id="delivery-location">
+                    <label for="location" class="form-label fs-4">Where should we make the Delivery?</label>
+                    <input type="text" name="location" id="location" class="form-control" />
+                </div>
+
+                <button class="btn-outline-secondary" type="submit" id="order">Order</button>
+            </form>
+
         </div>
-    </div>
-
-    <div id="order-details">
-        <p>We have received your order. You have ordered <span id="numbr"></span> pizza with <span id="topping"></span>
-            topping and <span id="crust"></span> crust </p>
-        <p>Your total price is <span id="price"></span></p>
-        <p id="loc">Your order will be delivered to <span id="location"> </span></p>
     </div>
 
     <footer class="container-fluid">
@@ -132,3 +151,6 @@
 </body>
 
 </html>
+
+
+
