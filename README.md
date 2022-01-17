@@ -32,4 +32,6 @@ You can reach me at apondioti@gmail.com
 
 ## LICENSE
 
-MIT 2022
+MIT License
+
+Copyright (c) 2022 Apondi Otieno
