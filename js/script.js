@@ -56,63 +56,63 @@ $(document).ready(function(){
     } else if (optionValue == "medium") {
       var pricePerSize = medium.price;
       return pricePerSize;
-      alert(pricePerSize)
+      alert(pricePerSize);
     } else if (optionValue == "small") {
       var pricePerSize = small.price;
       return pricePerSize;
-      alert(pricePerSize)
+      alert(pricePerSize);
     } else {
-      alert("sellect your pizza size");
+      alert("select your pizza size");
     }
 
 //     //crust
-//     var selectedcrusttype = $("input[name='pcrust']:checked").val();
-//     if (selectedcrusttype == "crispy") {
-//       var pricePerCrust = crispy.price;
-//       //return pricePerCrust;
-//       //alert(pricePerCrust);
-//     } else if (selectedcrusttype == "stuffed") {
-//       var pricePerCrust = stuffed.price;
-//       //return pricePerCrust;
-//       //alert(pricePerCrust)
-//     } else if (selectedcrusttype == "gluttenfree") {
-//       var pricePerCrust = gluttenFree.price;
-//       //return pricePerCrust;
-//       //alert(pricePerSize)
-//     } else {
-//       alert("sellect your pizza crust");
-//     }
+    var selectedcrusttype = $("option[name='pizza-crust']:selected").val();
+    if (selectedcrusttype == "crispy") {
+      var pricePerCrust = crispy.price;
+      return pricePerCrust;
+      alert(pricePerCrust);
+    } else if (selectedcrusttype == "stuffed") {
+      var pricePerCrust = stuffed.price;
+      return pricePerCrust;
+      alert(pricePerCrust);
+    } else if (selectedcrusttype == "glutenfree") {
+      var pricePerCrust = gluttenFree.price;
+      return pricePerCrust;
+      alert(pricePerSize);
+    } else {
+      alert("sellect your pizza crust");
+    }
 //     //toppings
-//     var selectedtoppings = $("input[name='ptoppings']:checked").val();
-//     if (selectedtoppings == "pepperoni") {
-//       var pricePerToppings = Pepperoni.price;
-//       //alert(pricePerToppings)
-//       //return pricePerToppings;
-//     } else if (selectedtoppings == "mushroom") {
-//       var pricePerToppings = Mushroom.price;
-//       //return pricePerToppings;
-//       //alert(pricePerToppings)
-//     } else if (selectedtoppings == "onion") {
-//       var pricePerToppings = Onion.price;
-//       //alert(pricePerToppings)
-//       //return pricePerToppings;
-//       //alert(pricePerToppings)
-//     } else if (selectedtoppings == "tomato") {
-//       var pricePerToppings = Tomato.price;
-//       alert(pricePerToppings)
-//       //return pricePerToppings;
-//       //alert(pricePerToppings)
-//     } else if (selectedtoppings == "freshgarlic") {
-//       var pricePerToppings = FreshGarlic.price;
-//       //alert(pricePerToppings)
-//       //return pricePerToppings;
-//       //alert(pricePerToppings)
-//     } else if (selectedtoppings == "freshbasil") {
-//       var pricePerToppings = FreshBasil.price;
-//       //alert(pricePerToppings)
-//       //return pricePerToppings;
-//     } else {
-//       alert("sellect your preffered toppongs");
+     var selectedtoppings = $("select[name='pizza-toppings']:selected").val();
+     if (selectedtoppings == "pepperoni") {
+       var pricePerToppings = Pepperoni.price;
+      //alert(pricePerToppings)
+       //return pricePerToppings;
+    } else if (selectedtoppings == "mushroom") {
+      var pricePerToppings = Mushroom.price;
+      return pricePerToppings;
+      alert(pricePerToppings)
+    } else if (selectedtoppings == "onion") {
+      var pricePerToppings = Onion.price;
+      //alert(pricePerToppings)
+      //return pricePerToppings;
+      //alert(pricePerToppings)
+    } else if (selectedtoppings == "tomato") {
+      var pricePerToppings = Tomato.price;
+      alert(pricePerToppings)
+      //return pricePerToppings;
+      //alert(pricePerToppings)
+    } else if (selectedtoppings == "freshgarlic") {
+      var pricePerToppings = FreshGarlic.price;
+      //alert(pricePerToppings)
+      //return pricePerToppings;
+      //alert(pricePerToppings)
+    } else if (selectedtoppings == "freshbasil") {
+      var pricePerToppings = FreshBasil.price;
+      //alert(pricePerToppings)
+      //return pricePerToppings;
+    } else {
+       alert("sellect your preffered toppongs");
 //     }
 //     var pizzaNumber = $("#number").val();
 //     //alert(pizzaNumber)
@@ -145,3 +145,10 @@ $(document).ready(function(){
 
 
 // });
+
+
+// function select(){
+//     if(value =="delivery"){
+//         value= prompt("Please enter location")
+//     }
+// }
